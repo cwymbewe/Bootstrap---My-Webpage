@@ -1,0 +1,139 @@
+* {
+    /* border: 1px solid #9e0808; */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #c1c4c7;
+    color: #333;
+    /* margin: 5px; */
+    /* padding: 5px; */
+    line-height: 1.5;
+}
+
+header, footer {
+    background: linear-gradient(to right, #a55fd7, #eb3939);
+    color: #fff;
+    padding: 10px 0;
+    /* text-align: center; */
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+section {
+    /* text-align: center; */
+    padding: 20px;
+}
+
+hr {
+    width: 50%;
+    margin: 20px auto;
+    border-top: 1px solid #ccc;
+}
+
+img {
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+form, iframe {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+    padding: 0;
+    border-radius: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: cal(100% - 5px);
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    background-color: blue;
+    color: #fff;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+li {
+    list-style: none;
+}
+
+form button {
+    width: calc(100% - 90px);
+    padding: 10px 20px;
+    margin-left: auto;
+
+}
+
+.icon-link {
+    /* display: inline-flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform .3s ease;
+    font-size: 30px;
+    margin: 0 10px;
+    color: #fff;
+    }
+
+.bi {
+    margin-right: 1px;
+    color: inherit;
+}
+
+.bi-linkedin {
+    background-color: #0e76a8;
+}
+
+.bi-whatsapp {
+    background-color: green;
+}
+
+.bi-twitter-x {
+    background-color: #333;
+}
+
+.bi-facebook {
+    background-color: #0e76a8;
+}
+
+.bi-envelope-at {
+    background-color: #eb3939;
+}
