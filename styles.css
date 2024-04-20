@@ -75,17 +75,19 @@ form textarea {
 
 form button[type="submit"] {
     background-color: blue;
+    background-image: linear-gradient(to right, #831bcd, #f9620b);
     color: #fff;
     border: 0;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
+    transition: background-image 0.3s ease;
 }
 
+form button:hover {
+    background-image: linear-gradient(to right, #f9620b, #831bcd);
 
-li {
-    list-style: none;
 }
 
 form button {
@@ -139,11 +141,12 @@ ul {
     display: flex;
     justify-content: center;
     gap: 15px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-li {
+ul li {
     padding: 10px 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
