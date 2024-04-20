@@ -100,7 +100,6 @@ form button {
     display: inline-flex;
     font-size: 1.8rem;
     /* border-radius: 50% !important; */
-    /* background-color: blue; */
     color: white;
     /* border: 1px solid red; */
     margin: 0;
@@ -132,4 +131,19 @@ form button {
 
 .bi-linkedin {
     color: blue;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border: 1px solid red;
+}
+
+li {
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
