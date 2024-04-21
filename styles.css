@@ -150,3 +150,14 @@ ul li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+@media only screen and (max-width: 768px) {
+    .skills-list {
+        flex-direction: column; /*Stacks skills vertically on smaller screens*/
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    header, footer {
+        padding: 15px;
+    }
+}
