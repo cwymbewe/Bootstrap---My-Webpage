@@ -1,0 +1,154 @@
+/* BACKGROUND COLORS
+==============================*/
+$bg-color1: #0e0e0e;
+$bg-color2: #9f9f9f;
+$bg-color3: #eee;
+
+body {
+  box-sizing: border-box;
+  background: $bg-color3;
+  color: $bg-color1;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.95;
+}
+
+/* PRELOADER CSS 
+=================================*/
+/* Primary Colors */
+$pr-color1: red;
+$pr-color2: green;
+$pr-color3: blue;
+
+@mixin border {
+  border-radius:50%;
+  border: 3px solid transparent;
+}
+
+@mixin content {
+  content: "";
+  position: absolute;
+  @include border;
+}
+
+.preloader-block {
+  //Parent Div to occupy full window height and width
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bg-color2;
+  //Set parent div to appear above everything else
+  z-index: 1001;
+}
+
+//  #navbar{
+//   color: white;
+// }
+
+#preloader-icon {
+  //Positioning of Icon in the center of the screen
+  display: block;
+  position: relative; 
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%); // alternatively use margin: width/2 0 0 height/2) to center div
+  //Style the icon outer using mixin
+  @include border;                   /* to use vendor prefixes           */
+  border-right-color: $pr-color1;
+  //Animate the icon outer
+  animation: spin 1.5s linear infinite;
+}
+
+#preloader-icon:before {
+  //Position inner content of the preloader-icon before. Ensure even spacing the circle by adding a pseudo element with same properties as
+  @include content;
+  top: 10px; 
+  right: 10px;
+  left: 10px;
+  bottom: 10px;
+  border-right-color: $pr-color2;
+  //Add a delay before starting the animation so that it looks like its rotating from one color
+  animation: spin 2s linear infinite;
+}
+
+
+#preloader-icon:after {
+  @include content;
+  top: 5px; 
+  right: 5px;
+  left: 5px;
+  bottom: 5px;
+  border-right-color: $pr-color3;
+  animation: spin 2.5s linear infinite;
+}
+ //Define animation methods for preloader icon
+@keyframes spin {  
+    0% { 
+      transform: rotate(0deg); 
+    }
+    100% { 
+      transform: rotate(360deg)
+    }
+}  
+
+
+/* PRELOADER TRANSITION 
+==============================*/
+//Hide the preloader when fully loaded
+
+.preloader-block .overlay {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background-color: $bg-color1;
+  z-index: 999;
+}
+
+.transition-left {
+  left: 0;
+}
+
+.transition-right {
+  right: 0;
+}
+
+/*Loaded */
+
+.loaded .preloader-block .overlay.transition-left {
+  transform: translateX(-100%);
+}
+
+.loaded .preloader-block .overlay.transition-right {
+  transform: translateX(100%);
+}
+
+.loaded #preloader-icon {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.loaded .preloader-block{ 
+  visibility: hidden;
+  // transition: all 0.3s 0.4s ease-out;
+}
+
+.loaded .preloader-block .overlay.transition-left {
+  transition: all 0.3s 0.3s ease-out;
+}
+
+.loaded .preloader-block .overlay.transition-right {
+  transition: all 0.3s 0.3s ease-out;
+}
+
+.loaded .preloader-block{ 
+  // visibility: hidden;
+  transition: all 0.3s 0.6s ease-out;
+}
+
+....*/

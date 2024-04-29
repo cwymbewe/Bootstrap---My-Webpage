@@ -1,5 +1,5 @@
 function changeAboutMeText() {
-    const aboutMeText = ["Tech Enthusiast", "Data Analyst", "Textile Technologist"];
+    const aboutMeText = ["Tech Enthusiast", "Passionate Data Analyst", "Textile Technologist", "Self-Taught Programmer"];
     const typingSpeed = 100;
     const eraseSpeed = 50;
     const pauseTime = 1500;

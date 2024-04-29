@@ -1,0 +1,112 @@
+/* BACKGROUND COLORS
+==============================*/
+body {
+  box-sizing: border-box;
+  background: #eee;
+  color: #0e0e0e;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.95;
+}
+
+/* PRELOADER CSS 
+=================================*/
+/* Primary Colors */
+.preloader-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9f9f9f;
+  z-index: 1001;
+}
+
+#navbar {
+  color: white;
+}
+
+.preloader-icon {
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid transparent;
+  /* to use vendor prefixes           */
+  border-right-color: red;
+  animation: spin 1.5s linear infinite;
+}
+
+.preloader-icon:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  bottom: 10px;
+  border-right-color: green;
+  animation: spin 2s linear infinite;
+}
+
+.preloader-icon:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  top: 5px;
+  right: 5px;
+  left: 5px;
+  bottom: 5px;
+  border-right-color: blue;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* PRELOADER TRANSITION 
+==============================*/
+.preloader-transition {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background-color: #0e0e0e;
+  z-index: 999;
+}
+
+.preloader-transition.left {
+  left: 0;
+}
+
+.preloader-transition.right {
+  right: 0;
+}
+
+.loaded .preloader-block .preloader-transition.left {
+  transform: translateX(-100%);
+}
+
+.loaded .preloader-block .preloader-transition.right {
+  transform: translateX(100%);
+}
+
+.loaded .preloader-icon {
+  opacity: 0;
+}
+
+body.loaded .preloader-block {
+  visibility: hidden;
+}/*# sourceMappingURL=styles.css.map */
