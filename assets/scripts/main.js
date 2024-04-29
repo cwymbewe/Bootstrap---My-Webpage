@@ -1,3 +1,5 @@
+
+
 function changeAboutMeText() {
     const aboutMeText = ["Tech Enthusiast", "Passionate Data Analyst", "Textile Technologist", "Self-Taught Programmer"];
     const typingSpeed = 100;

@@ -19,15 +19,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #9f9f9f;
-  z-index: 1001;
+  z-index: 999;
 }
 
-#navbar {
-  color: white;
-}
-
-.preloader-icon {
+#preloader-icon {
   display: block;
   position: relative;
   top: 50%;
@@ -40,9 +35,10 @@ body {
   /* to use vendor prefixes           */
   border-right-color: red;
   animation: spin 1.5s linear infinite;
+  z-index: 1001;
 }
 
-.preloader-icon:before {
+#preloader-icon:before {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -55,7 +51,7 @@ body {
   animation: spin 2s linear infinite;
 }
 
-.preloader-icon:after {
+#preloader-icon:after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -78,7 +74,7 @@ body {
 }
 /* PRELOADER TRANSITION 
 ==============================*/
-.preloader-transition {
+.preloader-block .overlay {
   position: fixed;
   top: 0;
   width: 51%;
@@ -87,26 +83,35 @@ body {
   z-index: 999;
 }
 
-.preloader-transition.left {
+.preloader-block .overlay.left {
   left: 0;
 }
 
-.preloader-transition.right {
+.preloader-block .overlay.right {
   right: 0;
 }
 
-.loaded .preloader-block .preloader-transition.left {
+/*Loaded */
+.loaded .overlay.left {
   transform: translateX(-100%);
 }
 
-.loaded .preloader-block .preloader-transition.right {
+.loaded .overlay.right {
   transform: translateX(100%);
 }
 
-.loaded .preloader-icon {
+.loaded #preloader-icon {
   opacity: 0;
 }
 
-body.loaded .preloader-block {
+.loaded .preloader-block {
   visibility: hidden;
+}
+
+.loaded .preloader-block .overlay.left {
+  transition: all 0.6s 0.6s ease-out;
+}
+
+.loaded .preloader-block .overlay.right {
+  transition: all 0.6s 0.6s ease-out;
 }/*# sourceMappingURL=styles.css.map */
