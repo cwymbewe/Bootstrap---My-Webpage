@@ -1,4 +1,7 @@
-
+// Function to fade-out the preloader icon
+setTimeout(function() {
+    $('#preloader-icon').fadeToggle();
+}, 3000);
 
 function changeAboutMeText() {
     const aboutMeText = ["Tech Enthusiast", "Passionate Data Analyst", "Textile Technologist", "Self-Taught Programmer"];
