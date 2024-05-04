@@ -81,6 +81,7 @@ body {
   height: 100%;
   background-color: #0e0e0e;
   z-index: 999;
+  animation: wipe-out-right 2.5s ease-out both;
 }
 
 .preloader-block .overlay.left {
@@ -98,11 +99,6 @@ body {
 
 .loaded .overlay.right {
   transform: translateX(100%);
-}
-
-.loaded #preloader-icon {
-  opacity: 0;
-  transition: all 1s ease-out;
 }
 
 .loaded .preloader-block {
