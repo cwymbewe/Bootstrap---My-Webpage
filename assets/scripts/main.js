@@ -12,7 +12,7 @@ window.addEventListener('load',() => {
 
 
 function changeAboutMeText() {
-    const aboutMeText = ["Tech Enthusiast", "Passionate Data Analyst", "Textile Technologist", "Self-Taught Programmer"];
+    const aboutMeText = ["a Tech Enthusiast", " a Passionate Data Analyst", "a Textile Technologist", "Self-Taught Programmer", "Charles Mbewe"];
     const typingSpeed = 100;
     const eraseSpeed = 50;
     const pauseTime = 1500;
