@@ -1,12 +1,12 @@
 // Function to fade-out the preloader icon
-const loaded = () => setTimeout(function() {
+const loaderTimer = () => setTimeout(function() {
     $('#preloader-icon').fadeToggle();
 },3000);
 
 // Calling the function when the page is fully loaded.
-const overlay = document.querySelectorAll('.overlay');
+const loaded = document.querySelectorAll('.preloader-block');
 window.addEventListener('load',() => {
-    loaded(); 
+    loaderTimer(); 
     document.body.classList.add('loaded');
 });
 
