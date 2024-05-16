@@ -22,7 +22,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     
   <!-- PRELOADER 
   ================================================= -->
@@ -37,7 +37,7 @@
   <header>
       <!-- NAVBAR STARTS HERE
   ================================================= -->
-    <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark border-bottom-0">
+    <nav class="navbar fixed-top navbar-expand-sm bg-dark navbar-dark border-bottom-0">
       <div class="container-fluid">
         <!-- Brand name/icon -->
         <span class="navbar-brand mb-0 h1">cwymbewe</span>
@@ -49,22 +49,22 @@
         <div class="collapse navbar-collapse" id="hamburger-icon">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" data-scroll-nav="0">Home</a>
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="1">About Me</a>
+              <a class="nav-link" href="#about">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="2">Skills</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="3">Portfolio</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" data-scroll-nav="4">Blog</a>
+              <a class="nav-link disabled" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="5">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -81,22 +81,19 @@
     </div>
   </header>
   
-  <!-- <section id="home" class="bg-img" style="background-image:url('assets/images/background-img.webp'); background-position: -25px 1140px;"> -->
-
-  </section>
-        <hr>
+  <hr>
     
-  <section class="container text-center">
+  <section id="about" class="container text-center">
           <h2>About Me</h2>
           <p>Hello! I'm Charles,and here is some little info about me</p>
-          <img class="img-thumbnail" src="./assets/images/charles.webp" alt="Charles pic" width="200" height="200">
+          <img class="img" src="./assets/images/charles.webp" alt="Charles pic" width="200" height="200">
   </section>
   <hr>
-  <section class="container text-center">
+  <section id="video" class="container text-center">
       <h2>Video Intro</h2>
       <iframe title="Loom Introductory Message" src="https://www.loom.com/embed/3c171c0e766b45f7baf860ae34013730" frameborder="0" height="315" width="560"></iframe>
   </section>
-  <section class="container text-center">
+  <section id="contact" class="container text-center">
           <h2>Contact Information</h2>
           <p>Let's Connect!</p>
           <div class="contact-list">
@@ -108,7 +105,7 @@
           </div>
   </section>
   <hr>
-  <section class="container text-center">
+  <section id="skills" class="container text-center">
           <h2>My Skills Set</h2>
           <table>
               <tr>
@@ -139,13 +136,13 @@
           </table>
   </section>
   <hr>
-  <section class="container text-center">
+  <section id="portfolio" class="container text-center">
           <h2>My Portfolio</h2>
           <p>Take a look at some of my works</p>
           <p><a href="project1.html" target="_blank" rel="noopener">Software Development</a> | <a href="project.html2" target="_blank" rel="noopener">Data Analysis</a></p>
   </section>
   <hr>
-  <section class="container text-center">
+  <section id="contact" class="container text-center">
           <h2>Contact Form</h2>
           <p>Let's work together...</p>
           <form action="">
